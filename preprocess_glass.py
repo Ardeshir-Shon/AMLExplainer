@@ -6,8 +6,8 @@ import pickle
 
 #Parameters
 DATAPATH = "./dataset/"
-train = 0.8 #percentage of training subgraph
-val = 0.1 #percentage of validation subgraph
+train = 0.1 #percentage of training subgraph
+val = 0.05 #percentage of validation subgraph
 
 #Read in nodes
 start = time.time()
