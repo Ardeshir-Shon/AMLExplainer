@@ -33,7 +33,7 @@ with open('n2id.pkl', 'wb') as fp:
 #Read in edge list
 edge = pd.read_csv(DATAPATH+"/background_edges.csv",usecols=["clId1","clId2"])
 print("load background edge time", time.time()-start)
-print("total number of edge: ",len(edge2))
+print("total number of edge: ",len(edge))
 start = time.time()
 
 file = open("./edge_list.txt","w")
@@ -74,6 +74,7 @@ for row in node.itertuples(index=False):
 
 #Generate Subgraph.pth
 file = open("./subgraphs.pth","w")
+counter = 0
 for i in sub.keys():
     counter += 1
     label = cc.loc[i,"ccLabel"]
@@ -85,4 +86,3 @@ for i in sub.keys():
         file.write(sub[i]+"\t"+label+"\t"+"test\n")
 file.close()
 print("generate subgraph.pth time: ", time.time()-start)
-
