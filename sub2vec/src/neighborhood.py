@@ -11,7 +11,7 @@ def arr2str(arr):
     return result
     
 
-def generateWalkFile(dirName, walkLength):
+def generateWalkFile(dirName, walkLength,p):
     walkFile = open(dirName+'.walk', 'w')
     indexToName = {}
     
